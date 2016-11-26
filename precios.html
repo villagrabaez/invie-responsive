@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Invie - tus mejores guitarras!!</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- 
+			Tip de optimizacion: a la hora de usar CDN para nuestra fuente, es conveniente
+			hacer el request en un solo <link> (Y);
+		-->
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
+	</head>
+	<body class="precios">
+
+	<header id="header" class="header background"> <!-- HEADER -->
+
+			<div class="contenedor">
+				<figure class="logotipo"> <!-- LOGOTIPO -->
+					<a href="index.html"><img src="images/invie.png" width="186px" height="60px" alt="Invie logotipo"></a>
+				</figure>
+
+				<span class="burger-button icon-menu" id="burger-button"></span>
+
+				<nav class="menu" id="menu"> <!-- MENÚ -->
+					<ul>
+						<li> <!-- list item -->
+							<a href="index.html">Home</a> <!-- ancla -->
+						</li>
+						<li>
+							<a href="index.html#guitarras">Guitarras</a> <!-- ancla -->
+						</li>
+						<li>
+							<a href="precios.html">Precios</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+		</header>
+		
+		<section class="tabla">
+			<div class="contenedor">
+				<table> <!-- tabla -->
+				<thead> <!-- cabecera de la tabla -->
+					<tr> <!-- filas -->
+						<th>Modelo</th> 
+						<th>Precio</th>
+						<th>Descriptión</th>
+						<th>Modelo</th> 
+						<th>Precio</th>
+						<th>Descriptión</th>
+					</tr>
+				</thead>
+
+				<tbody> <!-- cuerpo de la tabla -->
+					<tr>
+						<td>Invie Classic</td>
+						<td>$ 10.000</td>
+						<td>Una guitarra muy pro</td>
+						<td>Invie Classic</td>
+						<td>$ 10.000</td>
+						<td>Una guitarra muy pro</td>
+					</tr>
+
+					<tr>
+						<td>Invie Classic</td>
+						<td>$ 10.000</td>
+						<td>Una guitarra muy pro</td>
+						<td>Invie Classic</td>
+						<td>$ 10.000</td>
+						<td>Una guitarra muy pro</td>
+					</tr>
+
+					<tr>
+						<td>Invie Classic</td>
+						<td>$ 10.000</td>
+						<td>Una guitarra muy pro</td>
+						<td>Invie Classic</td>
+						<td>$ 10.000</td>
+						<td>Una guitarra muy pro</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="contenedor">
+				<div class="contacto">
+					<img src="images/invie-white.png" alt="Logotipo blanco">
+					<a href="tel:+595961325283"><strong>Teléfono</strong><span>305 334 445</span></a>
+					<a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>contacto@invie.com</span></a>
+				</div>
+				<form class="formulario">
+
+					<div class="col1">
+						<label for="nombre">Nombre:</label>
+						<input type="text" id="nombre" name="nombre" required>
+					
+						<label for="email">E-mail:</label>
+						<input type="email" id="email" name="email" required>
+
+						<div class="sexo">
+							<label for="mujer">
+								<input type="radio" checked id="mujer" name="sexo" value="mujer"> Mujer
+							</label>
+
+							<label for="hombre">
+								<input type="radio" id="hombre" name="sexo" value="hombre"> Hombre
+							</label>
+						</div>
+
+						<div class="intereses">
+							<label for="cotizacion">
+								<input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion"> Cotización
+							</label>
+
+							<label for="reclamos">
+								<input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+							</label>
+
+							<label for="comentarios">
+								<input type="checkbox" id="comentarios" name="intereses" value="comentarios"> Comentarios
+							</label>
+
+							<label form="otros">
+								<input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+							</label>
+						</div>
+					</div>
+
+					<div class="col2">
+						<label form="mensaje">Mensaje:
+							<textarea id="mensaje" cols="30" rows="7" name=""></textarea>
+						</label>
+
+						<input class="button" type="submit" value="Enviar" name="enviar">
+					</div>
+
+				</form>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			var consulta = matchMedia('(max-width: 500px)');
+			consulta.addListener(mediaQuery);
+
+			var $burgerButton = document.getElementById("burger-button");
+			var $menu = document.getElementById("menu");
+
+			function toggleMenu(){
+				$menu.classList.toggle('active');
+			}
+
+			function mediaQuery(){
+				if (consulta.matches) {
+					// Si se cumple la condicion
+					$burgerButton.addEventListener("touchstart", toggleMenu)
+					console.log('Se cumplio la condicion');
+				} else {
+					// Si no se cumple la condicion
+					$burgerButton.removeEventListener("touchstart", toggleMenu)
+					console.log('No se cumplio la condicion');
+				}
+			}
+
+			mediaQuery();
+			</script>
+	</body>
+</html>
