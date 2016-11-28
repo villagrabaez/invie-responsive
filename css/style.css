@@ -360,6 +360,13 @@ table, td, th{
 	}
 	.contacto{
 		margin: 0 auto;
+		display: block;
+	}
+	.contacto a{
+		display: block;
+	}
+	.sexo label{
+		display: block;
 	}
 	.formulario{
 		display: block;
@@ -368,14 +375,19 @@ table, td, th{
 	}
 	.intereses label{
 		display: block;
-		font-size: 16px;
+		font-size: 20px;
 	}
 	.col1{
 		margin: 0;
 	}
+
+	input[type="text"]{
+		margin-bottom: 15px;
+	}
+
 	input[type="text"], input[type="email"]{
 		padding: 5px;
-		font-size: 16px;
+		font-size: 20px;
 	}
 	textarea{
 		width: 100%;
